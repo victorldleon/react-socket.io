@@ -1,16 +1,21 @@
 import './App.css';
+import TrafficLight from './TrafficLight/TrafficLight';
 import io from 'socket.io-client';
 const socket = io.connect('http://localhost:3001');
 
 
 function App() {
-  const handleEmit = () => {
-    socket.emit('message', 'Hello from client');
-  }
 
+
+  const handleEmit = () => {
+    socket.emit('current_location', { lat: 50.4501, lng: 30.5234 });
+    // socket.emit('current_location', { id: socket.id ,lat: 21.258661, lng: -99.759626 });
+  }
+  
   return (
     <div className="App">
-      <div>Hello react</div>
+      <h1>Traffic Light</h1>
+      <TrafficLight socket={socket}/>
       <button onClick={handleEmit}>Emit socket.io event</button>
     </div>
   );

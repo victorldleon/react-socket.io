@@ -37,7 +37,7 @@ const checkCloseLights = (data) => {
     const lightsArr = [
         { id: 'hs-6lp0eqG7aT3hzAAAH', lat: 50.4501, lng: 30.5234 },
         { id: 'hs-6lp0eqG7aT3hzAAAH', lat: 21.258661, lng: -99.759626 },
-        { id: 'hs-6lp0eqG7aT3hzAAAH', lat: 51.4501, lng: 33.5234 },
+        { id: 'hs-6lp0eqG7aT3hzAAAH', lat: 28.664142200749986, lng: -106.10783767896342} 
     ];
     const distance = (lat1, lng1, lat2, lng2) => {
         const R = 6371; // Radius of the earth in km

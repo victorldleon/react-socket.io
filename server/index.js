@@ -20,6 +20,12 @@ const io = new Server(server, {
 
 io.on('connection', (socket) => {
     console.log('socket id', socket.id);
+    
+    socket.on('message', (data) => {
+        console.log('message', data);
+        io.emit('message', data);
+    }
+    );
 
     socket.on('disconnect', () => {
         console.log('socket disconnected', socket.id);
